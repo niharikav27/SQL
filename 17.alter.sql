@@ -1,0 +1,25 @@
+-- ALTER 
+-- to change the schema(columns)
+
+-- ADD COLUMN
+ALTER TABLE user
+ADD COLUMN city VARCHAR(25) DEFAULT "delhi";
+
+-- DROP COLUMN
+ALTER TABLE user
+DROP COLUMN age;
+
+-- RENAME TABLE
+ALTER TABLE user
+RENAME TO UserInfo;
+
+SELECT * FROM user;    -- now this will give error
+SELECT * FROM UserInfo;
+
+-- CHANGE COLUMN(RENAME COLUMN NAME)
+ALTER TABLE UserInfo
+CHANGE COLUMN following friends INT DEFAULT 0;
+
+-- MODIFY COLUMN(CHANGE DATATYPE , CONSTRAINTS)
+ALTER TABLE UserInfo
+MODIFY followers INT DEFAULT 5;
